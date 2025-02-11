@@ -1,9 +1,11 @@
-title = "Hinode"
-copyright = "Copyright © 2022 - 2025 Mark Dumay."
-enableGitInfo = true
+# toml-docs-start main
+title = "Kho Sàn Gỗ Nhập khẩu Tại Hà Nội"
+copyright = "Copyright © 2025"
+enableGitInfo = false
+# toml-docs-end main
 
 # additional settings
-baseURL = "https://example.com/"
+baseURL = "https://khovansango.com/"
 canonifyURLs = false
 enableEmoji = true
 enableRobotsTXT = true
@@ -14,11 +16,13 @@ summaryLength = 20
 # See https://github.com/gohugoio/hugo/issues/7228#issuecomment-714490456
 ignoreErrors = ["error-remote-getjson"]
 
-timeout = "180s"
+timeout = "1800s"
 
-languageCode = "en-us"
-defaultContentLanguage = "en"
+# toml-docs-start language
+languageCode = "vi-VN"
+defaultContentLanguage = "vi"
 defaultContentLanguageInSubdir = false
+# toml-docs-end language
 
 [outputFormats]
   [outputFormats.server]
@@ -61,13 +65,9 @@ home = ["HTML", "RSS", "REDIR", "netlify", "server"]
   tag = 'tags'
 
 [pagination]
-  pagerSize = 9
+  pagerSize = 15
 
 [privacy]
-  [privacy.vimeo]
-    disabled = false
-    simple = true
-
   [privacy.twitter]
     disabled = false
     enableDNT = true
@@ -86,7 +86,7 @@ home = ["HTML", "RSS", "REDIR", "netlify", "server"]
     disableInlineCSS = true
   [services.twitter]
     disableInlineCSS = true
-  [services.googleAnalytics]
+  # [services.googleAnalytics]
     # ID = "G-xxxxxxxxxx"
 
 [minify]
@@ -130,3 +130,6 @@ home = ["HTML", "RSS", "REDIR", "netlify", "server"]
     [[segments.headers.includes]]
        kind = '{home}'
        output = '{netlify,server}'
+# xử lý ảnh
+[imaging]
+quality = 90  # Tăng chất lượng lên 90%
